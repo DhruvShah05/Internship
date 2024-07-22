@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Time Period</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Select Time Period</h1>
+        <form method="POST">
+            <div class="mb-4">
+                <label for="time-period" class="block text-gray-700 font-medium mb-2">Time Period</label>
+                <select id="time-period" name="time-period" class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="">Select a time period</option>
+                    <option value="1-day">1 Day</option>
+                    <option value="1-week">1 Week</option>
+                    <option value="1-month">1 Month</option>
+                    <option value="2-months">2 Months</option>
+                    <option value="3-months">3 Months</option>
+                    <option value="4-months">4 Months</option>
+                    <option value="5-months">5 Months</option>
+                    <option value="6-months">6 Months</option>
+                    <option value="7-months">7 Months</option>
+                    <option value="8-months">8 Months</option>
+                    <option value="9-months">9 Months</option>
+                    <option value="10-months">10 Months</option>
+                    <option value="11-months">11 Months</option>
+                    <option value="1-year">1 Year</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

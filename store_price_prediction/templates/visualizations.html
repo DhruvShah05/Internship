@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Sales Visualization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-8">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Store {{ store_number }} Sales Visualization</h1>
+        <div class="grid grid-cols-1 gap-8 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">Actual vs Predicted (Last 10 Days)</h2>
+                <img src="{{ url_for('static', filename='plot/store_' + store_number|string + '_actual_vs_predicted.png') }}" alt="Actual vs Predicted Plot" class="w-full h-auto">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">Full Sales Data with Future Forecast</h2>
+                <img src="{{ url_for('static', filename='plot/store_' + store_number|string + '_full_forecast.png') }}" alt="Full Sales Data Plot" class="w-full h-auto">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-700">Last 90 Days and Future Forecast</h2>
+                <img src="{{ url_for('static', filename='plot/store_' + store_number|string + '_combined_forecast.png') }}" alt="Last 90 Days and Future Forecast Plot" class="w-full h-auto">
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="/" class="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out">
+                Back to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

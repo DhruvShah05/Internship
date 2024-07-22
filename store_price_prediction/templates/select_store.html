@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Store Number</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Select Store Number</h1>
+        <form method="POST">
+            <div class="mb-4">
+                <label for="store-number" class="block text-gray-700 font-medium mb-2">Store Number</label>
+                <select id="store-number" name="store-number" class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="">Select a store</option>
+                    {% for i in range(1, 55) %}
+                        <option value="{{ i }}">Store {{ i }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Next</button>
+        </form>
+    </div>
+</body>
+</html>
